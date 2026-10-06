@@ -32,7 +32,7 @@ for r in range(0, num_realizaciones, 1):
     A = mu_A + np.sqrt(var_A) * Z
 
     if(np.abs(A) > max_A):
-        max_A = A
+        max_A = np.abs(A)
 
     for k in range(0, N, 1):
         X[r, k] = A * np.sin(w * k)
